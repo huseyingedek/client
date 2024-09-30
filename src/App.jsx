@@ -1,20 +1,21 @@
 import React from "react";
 import Header from "./components/header/Header";
+import Categories from "./components/categories/Categories";
 
 function App() {
   return (
     <>
       <Header />
-      <div className="home px-6 flex justify-between">
-        <div className="categories">
-          <div>kategories</div>
+      <div className="home px-6 flex justify-between gap-10">
+        <div className="categories flex-1 overflow-auto max-h-[calc(100vh-_-112px)] pb-64">
+          <Categories />
         </div>
-          <div className="products">
-            <div>products</div>
-          </div>
-          <div className="">
-            <div>cart totals</div>
-          </div>
+        <div className="products flex-[8]">
+          <div>products</div>
+        </div>
+        <div className="">
+          <div>cart totals</div>
+        </div>
       </div>
     </>
   );
