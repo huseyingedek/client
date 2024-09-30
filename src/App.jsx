@@ -17,7 +17,7 @@ function App() {
             <Products />
           </div>
         </div>
-        <div className="cart-wrapper min-w-[300px] md:mt-[24px] border">
+        <div className="cart-wrapper min-w-[300px] md:-mr-[24px] md:-mt-[24px] border">
           <CartTotals />
         </div>
       </div>

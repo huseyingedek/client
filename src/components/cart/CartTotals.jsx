@@ -2,7 +2,7 @@ import { Button } from "antd";
 import { ClearOutlined } from '@ant-design/icons';
 const CartTotals = () => {
   return (
-    <div className="cart h-full max-h-[calc(100vh_-_120px)] flex flex-col">
+    <div className="cart h-full max-h-[calc(100vh_-_90px)] flex flex-col">
       <h2 className="bg-blue-600 text-center py-4 text-white font-bold tracking-wide">
         Sepetteki Ürünler
       </h2>
