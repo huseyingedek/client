@@ -26,7 +26,7 @@ const CartTotals = () => {
               className="w-full flex items-center justify-center rounded-full"
               icon={<PlusCircleOutlined />}
             />
-            <span>1</span>
+            <span className="font-bold">1</span>
             <Button
               type="primary"
               size="small"
@@ -60,7 +60,7 @@ const CartTotals = () => {
           <Button
             type="primary"
             size="large"
-            className="w-full flex items-center justify-center"
+            className="w-full flex items-center justify-center mt-2"
             icon={<ClearOutlined />}
             danger
           >
