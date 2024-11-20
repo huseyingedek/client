@@ -19,7 +19,22 @@ const Register = () => {
             <Form.Item label="Şifre" name={"password"} rules={[{ required: true, message: "Şifre Alanı Boş Bırakılamaz!" }]}>
               <Input.Password />
             </Form.Item>
-            <Form.Item label="Şifre Tekrar" name={"passwordAgain"} rules={[{ required: true, message: "Şifre Tekrar Alanı Boş Bırakılamaz!" }]}>
+            <Form.Item
+              label="Şifre Tekrar"
+              name={"passwordAgain"}
+              dependencies={["password"]}
+              rules={[{ required: true, message: "Şifre Tekrar Alanı Boş Bırakılamaz!" },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue('password') === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error('Şifreler uyuşmuyor'));
+                },
+              }),
+              ]}
+
+            >
               <Input.Password />
             </Form.Item>
             <Form.Item>
